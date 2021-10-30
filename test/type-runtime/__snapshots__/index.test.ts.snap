@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`type runtime get type info 1`] = `
+Object {
+  "Todo": "{ title: string; description: string; completed: boolean; }",
+  "TodoPreview": "[\\"use js\\", \\"return $.use(\\\\\\"Todo\\\\\\")\\\\r\\\\n    .type(); \\\\r\\\\n\\"]",
+}
+`;

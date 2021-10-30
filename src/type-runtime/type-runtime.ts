@@ -9,7 +9,6 @@ export interface ITypeInfo {
 }
 
 export class TypeRuntime {
-    // file name should ends with .ts
     private filePath: string
     private typeCode: string
     private tsCode: string
@@ -41,7 +40,7 @@ export class TypeRuntime {
     run(): ITypeInfo {
         // extension .ts is necessary here to make sure ts works as expected
         // or this.checker.getSymbolAtLocation(...) will return undefined
-        const sourceFile = this.project.updateSourceFile(this.filePath, this.tsCode) as any as ts.SourceFile;
+        const sourceFile = this.project.updateSourceFile(this.filePath.replace(".type", ".ts"), this.tsCode);
         const program = this.project.createProgram() as any as ts.Program;
         const checker = program.getTypeChecker();
 
