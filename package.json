@@ -1,5 +1,5 @@
 {
-  "name": "type-query",
+  "name": "@mistlog/type-query",
   "version": "0.0.1",
   "description": "jquery style type manipulation",
   "main": "build/index.js",
@@ -14,12 +14,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mistlog/typetype"
+    "url": "https://github.com/mistlog/type-query"
   },
   "scripts": {
-    "build": "del-cli ./build && tsc",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "clean": "del-cli ./build",
+    "build": "tsc",
+    "test": "jest --coverage"
   },
   "author": "mistlog",
   "license": "MIT",
