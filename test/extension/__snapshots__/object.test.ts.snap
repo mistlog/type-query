@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`object optional 1`] = `
+"type Todo = {
+  title: string;
+  description: string;
+  completed: boolean;
+};
+type TodoPreview = {
+  title?: string;
+  description: string;
+  completed: boolean;
+};"
+`;
+
+exports[`object optional: all 1`] = `
+"type Todo = {
+  title: string;
+  description: string;
+  completed: boolean;
+};
+type TodoPreview = {
+  title?: string;
+  description?: string;
+  completed?: boolean;
+};"
+`;
+
+exports[`object readonly 1`] = `
+"type Todo = {
+  title: string;
+  description: string;
+  completed: boolean;
+};
+type TodoPreview = {
+  readonly title: string;
+  description: string;
+  completed: boolean;
+};"
+`;

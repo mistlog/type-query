@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`core copy type with utils .use and .type 1`] = `
+"type Todo = {
+  title: string;
+  description: string;
+  completed: boolean;
+};
+type TodoPreview = {
+  title: string;
+  description: string;
+  completed: boolean;
+};"
+`;
