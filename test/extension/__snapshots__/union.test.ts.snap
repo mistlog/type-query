@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`union to intersection 1`] = `
+"type input = (\\"foo\\" | 42 | true);
+type result = (\\"foo\\" & 42 & true);"
+`;
+
+exports[`union to tuple 1`] = `
+"type input = (1 | \\"a\\" | true);
+type result = [1, \\"a\\", true];"
+`;

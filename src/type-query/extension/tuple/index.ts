@@ -1,5 +1,17 @@
-import { INumberTypeLiteral, ITupleType, ITypeExpression } from "@mistlog/typetype";
-import { booleanTypeLiteral, neverType, numberTypeLiteral, stringTypeLiteral } from "../../../type-babel";
+import { INumberTypeLiteral, IObjectTypeLiteral, ITupleType, ITypeExpression } from "@mistlog/typetype";
+import { booleanTypeLiteral, neverType, numberTypeLiteral, stringTypeLiteral, typeObjectProp } from "../../../type-babel";
+
+// https://github.com/type-challenges/type-challenges/blob/master/questions/11-easy-tuple-to-object/README.md
+export function tupleToObject(ast: ITupleType): IObjectTypeLiteral {
+    return {
+        kind: "ObjectTypeLiteral",
+        props: ast.items.map(item => {
+            if (item.kind === "StringTypeLiteral") {
+                return typeObjectProp(item.value, item.value);
+            }
+        })
+    }
+}
 
 export function push(ast: ITupleType, value: string | number): ITupleType {
     const item =

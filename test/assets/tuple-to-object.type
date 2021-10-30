@@ -1,0 +1,9 @@
+/* adapted from https://github.com/type-challenges/type-challenges/blob/master/questions/11-easy-tuple-to-object/README.md */
+
+type input = ["tesla", "model 3", "model X", "model Y"]
+
+type result = ``` "use js"
+   return $.use("input")
+      .tupleToObject()
+      .type();
+```

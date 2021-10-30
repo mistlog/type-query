@@ -1,0 +1,9 @@
+/* adapted from https://stackoverflow.com/questions/55127004/how-to-transform-union-type-to-tuple-type */
+
+type input = union [1, "a", true]
+
+type result = ``` "use js"
+   return $.use("input")
+      .unionToTuple()
+      .type();
+```

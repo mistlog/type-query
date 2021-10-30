@@ -1,13 +1,17 @@
 import { IObjectTypeLiteral, ITypeObjectProperty } from "@mistlog/typetype";
 
-export function omit(ast: IObjectTypeLiteral, predicate: Function): IObjectTypeLiteral {
+export function omit(ast: IObjectTypeLiteral, arg: Function | string): IObjectTypeLiteral {
     ast.props = ast.props.filter(each => {
         if (each.kind === "TypeObjectProperty") {
             const key = each.name.kind === "Identifier" ? each.name.name : each.name.kind === "StringLiteral" ? each.name.value : "";
-            const shouldRemove = predicate(key);
-            return shouldRemove ? false : true;
+            if (typeof arg === "function") {
+                const predicate = arg;
+                const shouldRemove = predicate(key);
+                return shouldRemove ? false : true;
+            } else if (typeof arg === "string") {
+                return key !== arg;
+            }
         }
-        return true;
     })
     return ast;
 }

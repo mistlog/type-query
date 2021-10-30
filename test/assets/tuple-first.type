@@ -1,0 +1,9 @@
+/* adapted from https://github.com/type-challenges/type-challenges/blob/master/questions/14-easy-first/README.md */
+
+type arr1 = ["a", "b", "c"]
+
+type head1 = ``` "use js"
+   return $.use("arr1")
+      .first()
+      .type();
+```

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tuple first 1`] = `
+"type arr1 = [\\"a\\", \\"b\\", \\"c\\"];
+type head1 = \\"a\\";"
+`;
+
+exports[`tuple includes 1`] = `
+"type input = [\\"a\\", \\"b\\", \\"c\\"];
+type result = true;"
+`;
+
+exports[`tuple length 1`] = `
+"type tesla = [\\"tesla\\", \\"model 3\\", \\"model X\\", \\"model Y\\"];
+type teslaLength = 4;"
+`;
+
+exports[`tuple push 1`] = `
+"type arr = [1, 2];
+type result = [1, 2, \\"3\\"];"
+`;
+
+exports[`tuple to object 1`] = `
+"type input = [\\"tesla\\", \\"model 3\\", \\"model X\\", \\"model Y\\"];
+type result = {
+  tesla: \\"tesla\\";
+  \\"model 3\\": \\"model 3\\";
+  \\"model X\\": \\"model X\\";
+  \\"model Y\\": \\"model Y\\";
+};"
+`;

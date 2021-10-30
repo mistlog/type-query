@@ -1,0 +1,9 @@
+/* adapted from https://github.com/type-challenges/type-challenges/blob/master/questions/3057-easy-push/README.md */
+
+type arr = [1, 2]
+
+type result = ``` "use js"
+   return $.use("arr")
+      .push("3")
+      .type();
+```

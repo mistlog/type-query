@@ -1,0 +1,7 @@
+type input = ["a", "b", "c"]
+
+type result = ``` "use js"
+   return $.use("input")
+      .includes("a")
+      .type();
+```

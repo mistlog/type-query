@@ -1,0 +1,13 @@
+/* adapted from https://github.com/type-challenges/type-challenges/blob/master/questions/4-easy-pick/README.md */
+
+type Todo = {
+  title: string,
+  description: string,
+  completed: boolean
+}
+
+type TodoPreview = ``` "use js" 
+  return $.use("Todo")
+    .pick('title', 'completed')
+    .type();
+```

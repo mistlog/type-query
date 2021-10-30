@@ -1,7 +1,7 @@
 import { transform } from "@mistlog/typetype";
 import { TypeContext, TypeRuntime } from "../../type-runtime";
 import { TypeQuery } from "./type-query";
-import { first, includes, length, omit, optional, pick, push, readonly } from "../extension";
+import { first, includes, length, omit, optional, pick, push, readonly, tupleToObject, unionToIntersection, unionToTuple } from "../extension";
 
 export function transcribe(path: string, source: string) {
     const runtime = new TypeRuntime(path, source);
@@ -14,6 +14,11 @@ export function transcribe(path: string, source: string) {
         query.install(includes);
         query.install(length);
         query.install(push);
+        query.install(tupleToObject);
+
+        // union
+        query.install(unionToTuple);
+        query.install(unionToIntersection);
 
         // object
         query.install(omit);
