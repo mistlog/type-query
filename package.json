@@ -9,12 +9,15 @@
     "typetype",
     "type"
   ],
+  "files": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mistlog/typetype"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "del-cli ./build && tsc",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
@@ -23,6 +26,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "@types/node": "^14.14.37",
+    "del-cli": "^4.0.1",
     "jest": "^27.0.4",
     "ts-jest": "^27.0.3",
     "ts-node": "^9.1.1",
